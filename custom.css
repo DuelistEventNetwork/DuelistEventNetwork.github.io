@@ -1,0 +1,17 @@
+/* Contrast fixes for light theme */
+
+/* Tailwind Typography uses very light marker colors in light mode.
+   Make ordered list numbers + unordered list bullets match text color. */
+.prose :where(ol > li):not(:where([class~=not-prose],[class~=not-prose] *))::marker,
+.prose :where(ul > li):not(:where([class~=not-prose],[class~=not-prose] *))::marker {
+  color: currentColor;
+}
+
+.zola-anchor {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.zola-anchor:hover {
+  opacity: 0.95;
+}
